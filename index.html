@@ -7,7 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/css/reset.css">
     <link rel="stylesheet" href="./assets/css/style.css">
-    <script src="assets/javascript/game.js"></script>
+    <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="assets/javascript/game.js"></script> -->
 </head>
 
 <body>
@@ -15,12 +16,79 @@
         <h1>Star Wars RPG</h1>
     </div>
 
-    <div id="images-section">
-        <span><p>Obi-Wan Kenobi<img src="./assets/images/obiWanKenobi.jpg">120</p></span>
-        <span><p>Luke Skywalker<img src="assets/images/lukeSkywalker.jpg">100</p></span>
-        <span><p>Darth<br>Vader<img src="assets/images/darthVader.jpg">150</p></span>
-        <span><p>Darth<br> Maul<img src="assets/images/darthMaul.jpg">180</p></span>
+    <div id="imageSection">
+        <span id="pickObi">
+            <p>Obi-Wan Kenobi<img src="./assets/images/obiWanKenobi.jpg">120</p>
+        </span>
+        <span id="pickLuke">
+            <p>Luke Skywalker<img src="assets/images/lukeSkywalker.jpg">100</p>
+        </span>
+        <span id="pickDarth">
+            <p>Darth<br>Vader<img src="assets/images/darthVader.jpg">150</p>
+        </span>
+        <span id="pickMaul">
+            <p>Darth<br>Maul<img src="assets/images/darthMaul.jpg">180</p>
+        </span>
     </div>
+
+    <div id="attacker">
+        <h1>Your Character</h1>
+    </div>
+
+    <div id="pickEnemy">
+        <h1>Enemies To Attack</h1>
+    </div>
+
+    <div>
+        <h1>Fight Section</h1>
+        <button>Attack</button>
+    </div>
+
+    <div>
+        <h1>Defender</h1>
+    </div>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="assets/javascript/game.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            var yourCharacter;
+            var enemies;
+            var defender;
+
+            var obiWan = {
+                hp: 120,
+                attack: 8
+            };
+
+            var luke = {
+                hp: 100,
+                attack: 5
+            };
+
+            var darthVader = {
+                hp: 150,
+                attack: 20,
+            };
+
+            var darthMaul = {
+                hp: 180,
+                attack: 25
+            };
+
+            // Functions
+
+            $("span").on("click", function () {
+                if (("#pickLuke" === true) || ("#pickObi" === true) || ("#pickDarth" === true) || ("#pickMaul" === true));
+                
+                $(this).appendTo("#attacker");
+               
+            });
+
+        });
+
+    </script>
 
 
 
