@@ -2,6 +2,7 @@ $(document).ready(function() {
 var yourCharacter;
 var enemies;
 var defender;
+var characterChosen = false;
 
 var obiWan = {
     hp: 120,
@@ -25,8 +26,16 @@ var darthMaul = {
 
 // Functions
 
+
 $("#attacker").on("click", function() {
-    $("#imageSection").appendTo("#attacker");
+   console.log("abc") 
+    if (characterChosen) {
+        characterChosen=true;
+        $("#imageSection").appendTo("#attacker");
+        console.log(characterChosen);
+        $("#imageSection").appendTo("#pickEnemy");
+        console.log("addingEnemoes");
+    }
 
 });
 
